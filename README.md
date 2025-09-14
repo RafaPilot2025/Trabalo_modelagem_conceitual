@@ -25,12 +25,3 @@ Além de contar todos os atributos, entidades e relacionamentos necessários, o 
 5.	Verificar as viagens onde o rebocador prestou assistência;
 6.	Listar as atalaias que o prático está trabalhando;
 7.	Fazer a estatísticas da frequência dos pontos de embarque e desembarque;
-
-
-Catálogo de PONTO_EMBARQUE
-
-Consultar pontos de embarque por codigo e local, exibindo também o nome para referência rápida em operações.
-
-Validações básicas e deduplicação
-
-Conferir obrigatoriedade e consistência: data_hora_fim > data_hora_inicio; impedir duplicidades por IMO (NAVIO), CPF (PRATICO) e CNPJ (AGENCIA/ARMADOR/EMPRESA_PRATICAGEM).
