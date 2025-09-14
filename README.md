@@ -25,3 +25,6 @@ Além de contar todos os atributos, entidades e relacionamentos necessários, o 
 5.	Verificar as viagens onde o rebocador prestou assistência;
 6.	Listar as atalaias que o prático está trabalhando;
 7.	Fazer a estatísticas da frequência dos pontos de embarque e desembarque;
+
+![img](img/Empresa_de_praticagem_ER_modelo_conceitual.png)
+
