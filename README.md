@@ -34,3 +34,45 @@ A coexistência de ASSISTE (rebocador–viagem) e AJUDA (rebocador–navio) refl
 Atributos de localização, como local e endereço, em TERMINAL_SAI, TERMINAL_CHEGA e PONTO_EMBARQUE, definem com precisão onde a operação ocorre fisicamente.
 Identificadores oficiais — IMO para NAVIO, CNPJ para entidades jurídicas e CPF para PRATICO — são tratados como chaves naturais, garantindo unicidade e integridade nos respectivos cadastros.
 O modelo contempla a cadeia operacional completa: a AGENCIA coordena a VIAGEM do NAVIO do ARMADOR, atendida por PRATICO, com apoio de REBOCADOR, sob gestão da ATALAIA, envolvendo TERMINAL_SAI, TERMINAL_CHEGA e PONTO_EMBARQUE, cobrindo do planejamento à execução segura das manobras.
+
+Aqui vão 10 funcionalidades simples, usando apenas os atributos que já existem no seu modelo (sem preço):
+
+Cadastro e busca de NAVIO
+
+Cadastrar e localizar navios por IMO (único) ou por nome_navio; listar também tonelagem_bruta e calado.
+
+Relatório técnico do NAVIO
+
+Gerar um resumo por navio com IMO, nome_navio, tonelagem_bruta, calado para apoio ao planejamento operacional.
+
+Agenda de VIAGENS por período
+
+Filtrar viagens por data_hora_inicio e data_hora_fim e exibir o NAVIO (IMO/nome) associado.
+
+Mapa de VIAGEM por terminais
+
+Para cada viagem, apresentar o TERMINAL_SAI e o TERMINAL_CHEGA com seus codigo, local, telefone, endereco.
+
+Ficha da AGENCIA por VIAGEM
+
+Ao abrir uma viagem, mostrar os contatos da AGENCIA responsável (cnpj, nome_agencia, telefone, email, endereco).
+
+Cartão do PRATICO
+
+Exibir dados do prático (cpf, nome) e listar as VIAGENS em que atuou num intervalo de tempo.
+
+Catálogo de REBOCADOR
+
+Listar rebocadores com nome e potencia e, quando aplicável, associá-los às VIAGENS que assistiram.
+
+Cadastro do ARMADOR com frota
+
+Manter dados do armador (cnpj, nome, endereco, telefone) e listar os NAVIOS que lhe pertencem (via IMO/nome_navio).
+
+Catálogo de PONTO_EMBARQUE
+
+Consultar pontos de embarque por codigo e local, exibindo também o nome para referência rápida em operações.
+
+Validações básicas e deduplicação
+
+Conferir obrigatoriedade e consistência: data_hora_fim > data_hora_inicio; impedir duplicidades por IMO (NAVIO), CPF (PRATICO) e CNPJ (AGENCIA/ARMADOR/EMPRESA_PRATICAGEM).
